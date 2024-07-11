@@ -14,7 +14,7 @@ Quickly browse the history of files in any git repo:
 
 [Try it](https://github.githistory.xyz/babel/babel/blob/master/packages/babel-core/test/browserify.js)
 
-> If you like this project consider [backing my open source work on Patreon!](https://patreon.com/pomber)  
+> If you like this project consider [backing my open source work on Patreon!](https://patreon.com/pomber)
 > And follow [@pomber](https://twitter.com/pomber) on twitter for updates.
 
 ## Extensions
@@ -42,7 +42,7 @@ javascript: (function() {
 
 ### Local Repos
 
-You can use Git History for local git repos with the [CLI](https://github.com/pomber/git-history/tree/master/cli) or with the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=pomber.git-file-history).
+You can use Git History for local git repos with the [CLI](https://github.com/HenryTSZ/git-history/tree/master/cli) or with the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=HenryTsz.git-file-history).
 
 ## Support Git History
 

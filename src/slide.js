@@ -1,5 +1,4 @@
 import React from "react";
-import animation from "./animation";
 import theme from "./nightOwl";
 import Scroller from "./scroller";
 
@@ -80,8 +79,24 @@ function Slide({ lines, styles, changes }) {
   );
 }
 
-export default function SlideWrapper({ time, version }) {
+const getStyles = lines =>
+  lines.map(({ left, middle }) => {
+    let backgroundColor = "transparent";
+    // remove
+    if (left && !middle) {
+      backgroundColor = "#4A171A";
+    }
+    // add
+    if (!left && middle) {
+      backgroundColor = "#333927";
+    }
+    return {
+      backgroundColor
+    };
+  });
+
+export default function SlideWrapper({ version }) {
   const { lines, changes } = version;
-  const styles = animation((time + 1) / 2, lines);
+  const styles = getStyles(lines);
   return <Slide lines={lines} styles={styles} changes={changes} />;
 }

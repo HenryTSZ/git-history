@@ -21,7 +21,7 @@ export default function Landing() {
         style={{
           alignItems: "center",
           justifyContent: "center",
-          color: "#222",
+          color: "#222"
         }}
       >
         <video
@@ -34,7 +34,7 @@ export default function Landing() {
           style={{
             borderRadius: "3px",
             height: "350",
-            boxShadow: "0 20px 50px 0 rgba(0,0,0,0.2)",
+            boxShadow: "0 20px 50px 0 rgba(0,0,0,0.2)"
           }}
         >
           <source src={demoWebm} type="video/webm" />
@@ -74,7 +74,7 @@ export default function Landing() {
             </a>
 
             <a
-              href="https://github.com/pomber/git-history/tree/master/cli"
+              href="https://github.com/HenryTSZ/git-history/tree/master/cli"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -82,7 +82,7 @@ export default function Landing() {
             </a>
 
             <a
-              href="https://marketplace.visualstudio.com/items?itemName=pomber.git-file-history"
+              href="https://marketplace.visualstudio.com/items?itemName=HenryTsz.git-file-history"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -93,11 +93,11 @@ export default function Landing() {
             style={{
               display: "flex",
               alignItems: "center",
-              justifyContent: "space-between",
+              justifyContent: "space-between"
             }}
           >
             <iframe
-              src="https://ghbtns.com/github-btn.html?user=pomber&repo=git-history&type=star&count=true&size=large"
+              src="https://ghbtns.com/github-btn.html?user=HenryTSZ&repo=git-history&type=star&count=true&size=large"
               title="GitHub Stars"
               frameBorder="0"
               scrolling="0"
@@ -105,7 +105,7 @@ export default function Landing() {
               height="30px"
             />
             <i>
-              by <a href="https://twitter.com/pomber">@pomber</a>
+              by <a href="https://github.com/HenryTSZ">@HenryTSZ</a>
             </i>
           </div>
         </div>
@@ -200,7 +200,7 @@ function Backers() {
     <section
       style={{
         padding: "28px 0px",
-        background: "linear-gradient(rgba(220, 220, 220),rgba(255, 255, 255))",
+        background: "linear-gradient(rgba(220, 220, 220),rgba(255, 255, 255))"
       }}
       className="support"
     >
@@ -253,7 +253,7 @@ function Backers() {
         <p>This project exists thanks to all the people who contribute.</p>
 
         <ResponsivePicture
-          link="https://github.com/pomber/git-history/graphs/contributors"
+          link="https://github.com/HenryTSZ/git-history/graphs/contributors"
           alt="contributors"
           src="https://opencollective.com/git-history/contributors.svg"
           append="&button=false"

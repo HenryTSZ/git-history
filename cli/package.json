@@ -2,7 +2,7 @@
   "name": "git-file-history",
   "description": "Quickly browse the history of a file from any git repository",
   "version": "1.0.1",
-  "repository": "pomber/git-history",
+  "repository": "HenryTSZ/git-history",
   "keywords": [
     "cli",
     "git",

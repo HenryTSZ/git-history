@@ -1,7 +1,7 @@
 {
   "name": "githistory-web",
   "version": "1.0.1",
-  "repository": "pomber/git-history",
+  "repository": "HenryTSZ/git-history",
   "private": true,
   "dependencies": {
     "@craco/craco": "^3.5.0",

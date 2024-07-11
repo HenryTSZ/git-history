@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import useSpring from "react-use/lib/useSpring";
 import Swipeable from "react-swipeable";
 import Slide from "./slide";
 import "./comment-box.css";
@@ -13,6 +12,7 @@ function CommitInfo({ commit, move, onClick }) {
         position: "absolute",
         left: "50%",
         transform: `translateX(-50%) translateX(${250 * move}px)`,
+        transition: "transform 0.3s ease",
         opacity: 1 / (1 + Math.min(0.8, Math.abs(move))),
         zIndex: !isActive && 2
       }}
@@ -70,10 +70,22 @@ function CommitInfo({ commit, move, onClick }) {
 }
 
 function CommitList({ commits, currentIndex, selectCommit }) {
+  const [isScrolling, setIsScrolling] = useState(false);
+
   const mouseWheelEvent = e => {
-    e.preventDefault();
-    selectCommit(currentIndex - (e.deltaX + e.deltaY) / 100);
+    if (isScrolling) return;
+    setIsScrolling(true);
+    const move = e.deltaX + e.deltaY;
+    if (move > 0) {
+      selectCommit(currentIndex - 1);
+    } else if (move < 0) {
+      selectCommit(currentIndex + 1);
+    }
+    setTimeout(() => {
+      setIsScrolling(false);
+    }, 300);
   };
+
   return (
     <div
       onWheel={mouseWheelEvent}
@@ -104,25 +116,24 @@ export default function History({ versions, loadMore }) {
 }
 
 function Slides({ versions, loadMore }) {
-  const [current, target, setTarget] = useSliderSpring(0);
+  const [target, setTarget] = useState(0);
+
   const commits = versions.map(v => v.commit);
   const setClampedTarget = newTarget => {
-    setTarget(Math.min(commits.length - 0.75, Math.max(-0.25, newTarget)));
+    setTarget(Math.min(commits.length - 1, Math.max(0, newTarget)));
     if (newTarget >= commits.length - 5) {
       loadMore();
     }
   };
-  const index = Math.round(current);
-  const nextSlide = () => setClampedTarget(Math.round(target - 0.51));
-  const prevSlide = () => setClampedTarget(Math.round(target + 0.51));
+  const index = target;
+  const nextSlide = () => setClampedTarget(target - 1);
+  const prevSlide = () => setClampedTarget(target + 1);
   useEffect(() => {
     document.body.onkeydown = function(e) {
       if (e.keyCode === 39) {
         nextSlide();
       } else if (e.keyCode === 37) {
         prevSlide();
-      } else if (e.keyCode === 32) {
-        setClampedTarget(current);
       }
     };
   });
@@ -131,7 +142,7 @@ function Slides({ versions, loadMore }) {
     <React.Fragment>
       <CommitList
         commits={commits}
-        currentIndex={current}
+        currentIndex={target}
         selectCommit={index => setClampedTarget(index)}
       />
       <Swipeable
@@ -139,17 +150,8 @@ function Slides({ versions, loadMore }) {
         onSwipedRight={prevSlide}
         style={{ height: "100%" }}
       >
-        <Slide time={index - current} version={versions[index]} />
+        <Slide version={versions[index]} />
       </Swipeable>
     </React.Fragment>
   );
-}
-
-// TODO use ./useSpring
-function useSliderSpring(initial) {
-  const [target, setTarget] = useState(initial);
-  const tension = 0;
-  const friction = 10;
-  const value = useSpring(target, tension, friction);
-  return [Math.round(value * 100) / 100, target, setTarget];
 }

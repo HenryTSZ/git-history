@@ -58,7 +58,7 @@ export function Error({ error, gitProvider }) {
 
   console.error(error);
   console.error(
-    "Let us know of the error at https://github.com/pomber/git-history/issues"
+    "Let us know of the error at https://github.com/HenryTSZ/git-history/issues"
   );
   return (
     <Center>

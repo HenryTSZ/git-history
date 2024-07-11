@@ -27,7 +27,7 @@ app.use(serve(sitePath));
 app.on("error", err => {
   console.error("Server error", err);
   console.error(
-    "Let us know of the error at https://github.com/pomber/git-history/issues"
+    "Let us know of the error at https://github.com/HenryTSZ/git-history/issues"
   );
 });
 

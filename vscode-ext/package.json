@@ -3,8 +3,8 @@
   "displayName": "Git File History",
   "description": "Modern, fast and intuitive tool for browsing the history and files in any git repository",
   "version": "1.0.1",
-  "repository": "pomber/git-history",
-  "publisher": "pomber",
+  "repository": "HenryTSZ/git-history",
+  "publisher": "HenryTsz",
   "license": "MIT",
   "keywords": [
     "git",
