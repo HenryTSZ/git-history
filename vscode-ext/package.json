@@ -2,7 +2,7 @@
   "name": "git-file-history-new",
   "displayName": "Git File History New",
   "description": "Modern, fast and intuitive tool for browsing the history and files in any git repository",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "repository": "HenryTSZ/git-history",
   "publisher": "HenryTsz",
   "license": "MIT",

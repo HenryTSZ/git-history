@@ -1,19 +1,22 @@
-# Git File History
+# Git File History New
 
 Quickly browse the history of a file from any git repository
 
-![feature X](https://user-images.githubusercontent.com/1911623/52807635-d5043480-306a-11e9-9b03-351b7cda4936.gif)
+![feature X](https://raw.githubusercontent.com/HenryTSZ/git-history/main/src/demo.gif)
 
-### Sponsors
+## Installation
 
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/git-history#sponsor)]
+- Click on the Extensions icon (usually on the left-hand side of your editor).
+- Search for "Git File History New".
+- Find the extension in the list and click the install button.
 
-<a href="https://github.com/selefra/selefra" target="_blank"><img src="https://github.com/selefra.png" style="border-radius: 50%" alt="selefra" width="100"></a>
+or click on [VS Code extension](https://marketplace.visualstudio.com/items?itemName=HenryTsz.git-file-history-new) to install it.
 
-<a href="https://opencollective.com/git-history/sponsor/0/website" target="_blank"><img src="https://opencollective.com/git-history/sponsor/0/avatar.svg"></a>
+## Usage
 
-### Backers
+### Using the command palette:
 
-Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/git-history#backer)]
-
-<a href="https://opencollective.com/git-history#backers" target="_blank"><img src="https://opencollective.com/git-history/backers.svg?width=890"></a>
+- Bring up the command palette, and select "Git File History".
+- Select one of the commands mentioned below.
+- Press [Enter] to confirm, or [Escape] to cancel.
+- Use [left arrow] and [right arrow] to move between commits.
