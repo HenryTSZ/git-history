@@ -1,8 +1,8 @@
 {
-  "name": "git-file-history",
-  "displayName": "Git File History",
+  "name": "git-file-history-new",
+  "displayName": "Git File History New",
   "description": "Modern, fast and intuitive tool for browsing the history and files in any git repository",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "repository": "HenryTSZ/git-history",
   "publisher": "HenryTsz",
   "license": "MIT",
@@ -38,7 +38,7 @@
     ]
   },
   "scripts": {
-    "build-site": "cd .. && cross-env PUBLIC_URL=. REACT_APP_GIT_PROVIDER=vscode yarn build && rm -fr vscode-ext/site/ && cp -r build/ vscode-ext/site/",
+    "build-site": "cd .. && cross-env PUBLIC_URL=. REACT_APP_GIT_PROVIDER=vscode GENERATE_SOURCEMAP=false yarn build && rm -fr vscode-ext/site/ && cp -r build/ vscode-ext/site/",
     "build": " yarn build-site",
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "node ./node_modules/vscode/bin/test",

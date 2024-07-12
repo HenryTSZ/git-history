@@ -168,7 +168,8 @@ export default function Scroller({
           margin: "auto",
           padding: "10px",
           boxSizing: "border-box",
-          height: "100%"
+          height: "100%",
+          background: "transparent"
         }}
         children={children}
       />

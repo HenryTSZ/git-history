@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import History from "./history";
-import Landing from "./landing";
+// import Landing from "./landing";
 import { useDocumentTitle, Loading, Error } from "./app-helpers";
 import getGitProvider from "./git-providers/providers";
 
@@ -8,7 +8,25 @@ export default function App() {
   const gitProvider = getGitProvider();
 
   if (gitProvider.showLanding()) {
-    return <Landing />;
+    // return <Landing />;
+    const url = `${window.location.protocol}//${
+      window.location.host
+    }/babel/babel/blob/master/packages/babel-core/test/browserify.js`;
+    return (
+      <div
+        style={{
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "1.2rem"
+        }}
+      >
+        <a className="button" href={url}>
+          Try it
+        </a>
+      </div>
+    );
   } else {
     return (
       <React.Fragment>

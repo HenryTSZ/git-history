@@ -42,7 +42,7 @@ javascript: (function() {
 
 ### Local Repos
 
-You can use Git History for local git repos with the [CLI](https://github.com/HenryTSZ/git-history/tree/master/cli) or with the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=HenryTsz.git-file-history).
+You can use Git History for local git repos with the [CLI](https://github.com/HenryTSZ/git-history/tree/master/cli) or with the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=HenryTsz.git-file-history-new).
 
 ## Support Git History
 

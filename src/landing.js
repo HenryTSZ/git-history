@@ -82,7 +82,7 @@ export default function Landing() {
             </a>
 
             <a
-              href="https://marketplace.visualstudio.com/items?itemName=HenryTsz.git-file-history"
+              href="https://marketplace.visualstudio.com/items?itemName=HenryTsz.git-file-history-new"
               target="_blank"
               rel="noopener noreferrer"
             >

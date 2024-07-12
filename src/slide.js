@@ -13,14 +13,14 @@ theme.styles.forEach(({ types, style }) => {
 });
 
 function getLineHeight(line, i, { styles }) {
-  return styles[i].height != null ? styles[i].height : 15;
+  return styles[i].height != null ? styles[i].height : 18;
 }
 
 function getLine(line, lineNumber, i, { styles }) {
   const style = styles[i];
   return (
     <div
-      style={Object.assign({ overflow: "hidden", height: "15px" }, style)}
+      style={Object.assign({ overflow: "hidden", height: "18px" }, style)}
       key={line.key}
     >
       <span
@@ -84,11 +84,11 @@ const getStyles = lines =>
     let backgroundColor = "transparent";
     // remove
     if (left && !middle) {
-      backgroundColor = "#4A171A";
+      backgroundColor = "rgba(255, 0, 0, 0.2)";
     }
-    // add
+    // insert
     if (!left && middle) {
-      backgroundColor = "#333927";
+      backgroundColor = "rgba(155, 185, 85, 0.2)";
     }
     return {
       backgroundColor
